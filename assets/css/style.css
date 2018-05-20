@@ -1,0 +1,31 @@
+
+.page{
+    background: yellow;
+}
+
+/* Form styling*/
+form{
+    width: 100%;
+}
+.form-group{
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+#title{
+    margin-bottom: 20px;
+}
+
+#emotionInput{
+    width: 100%;
+}
+.btn{
+    margin-top: 30px;
+    background-color: rgb(161, 159, 159);
+    border: solid 2px white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+
