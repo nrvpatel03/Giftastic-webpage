@@ -1,8 +1,12 @@
 
 .page{
     background-image: url("../images/newBackground.jpg");
+    background-repeat: repeat;
     width:100%;
     height: 900px;
+}
+#gifDiv{
+    width:100%;
 }
 
 /* Form styling*/
