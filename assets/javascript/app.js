@@ -80,7 +80,7 @@ var ajax;
 $(document).on("click",".newButton",function(){
     //create query url need limit variable
 
-    var part = "http://api.giphy.com/v1/gifs/search?q="
+    var part = "https://api.giphy.com/v1/gifs/search?q="
     var apiKey = "&api_key=Uzca876e5K4XznLnTjHlBZeb0IwrFA0p&limit="
     var input = $(this).attr("feeling-name");
     var offset = parseInt($(this).attr("offset"));
