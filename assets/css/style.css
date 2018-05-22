@@ -15,11 +15,12 @@
     margin-top: 25px;
     margin-bottom: 15px;
 }
-#title{
+.title{
     background: yellow;
     padding: 15px;
     border-radius: 10px;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
 #emotionInput{
@@ -28,14 +29,14 @@
     border-radius: 10px;
 }
 .btn{
-    margin-top: 30px;
     background-color: yellow;
     border: solid 2px white;
-    padding: 25px;
+    padding: 15px;
     border-radius: 50%;
-    font-size: 150%;
+    font-size: 130%;
     color: black;
     font-weight: bold;
+    white-space: normal;
 }
 .btn:focus, .btn:active:focus,.btn.active:focus{
     outline: none;

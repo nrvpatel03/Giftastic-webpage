@@ -77,16 +77,16 @@ var ajax;
 
 $(document).on("click",".newButton",function(){
     //create query url need limit variable
-//fix offset
+
     var part = "http://api.giphy.com/v1/gifs/search?q="
     var apiKey = "&api_key=Uzca876e5K4XznLnTjHlBZeb0IwrFA0p&limit="
     var input = $(this).attr("feeling-name");
     var offset = parseInt($(this).attr("offset"));
-    console.log(offset);
     var queryoffset = offset;
     offset+=10;
     $(this).attr("offset",offset);
-
+    
+//change offset by 10 to load more gifs if we click again.
     var queryUrl = part + input + apiKey + 10 + "&offset=" + queryoffset;
     $(".page").css("height","auto");
     $.ajax({
@@ -95,11 +95,11 @@ $(document).on("click",".newButton",function(){
     }).then(function(response){
         //iterate through response array and grab the image urls
         ajax=response;
-        console.log(ajax);
         ajaxSetup(ajax);
     })
 });
 
+//gif images play on click 
 $(document).on("click",".gifImages",function(){
     var currentstate = $(this).attr("data-state");
     var currentInd = $(this).attr("data-num");
