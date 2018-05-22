@@ -32,15 +32,17 @@ $(document).ready(function(){
             var img = $("<img>");
             var rating = $("<p>");
             //moving images, need to figure out how to pause
-            img.attr("src",ajax.data[i].images.fixed_width_still.url);
-            img.attr("data-num",i);
+            img.attr("move",ajax.data[i].images.fixed_width.url);
+            img.attr("still",ajax.data[i].images.fixed_width_still.url);
+            img.attr("src",img.attr("still"));
             img.attr("data-state","still");
             img.addClass("img-responsive gifImages");
             img.css("width","100%");
             img.css("height", "60%");
-            rating.addClass("text-center");
+            rating.addClass("text-center h6");
             rating.text("Rating: " + ajax.data[i].rating);
-            rating.css("background-color","white");
+            rating.css("background-color","yellow");
+            rating.css("padding","20px");
             gif.append(img);
             gif.append(rating);
             gif.css("margin-right","20px");
@@ -102,13 +104,12 @@ $(document).on("click",".newButton",function(){
 //gif images play on click 
 $(document).on("click",".gifImages",function(){
     var currentstate = $(this).attr("data-state");
-    var currentInd = $(this).attr("data-num");
     if(currentstate==="still"){
         $(this).attr("data-state","animated");
-        $(this).attr("src",ajax.data[currentInd].images.fixed_width.url);
+        $(this).attr("src",$(this).attr("move"));
     }else{
         $(this).attr("data-state","still");
-        $(this).attr("src",ajax.data[currentInd].images.fixed_width_still.url);
+        $(this).attr("src",$(this).attr("still"));
     }
 })
 
